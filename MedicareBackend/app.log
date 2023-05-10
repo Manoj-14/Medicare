@@ -1,0 +1,47 @@
+2023-05-10 12:20:39 - Starting MedicareBackendApplication using Java 17.0.6 with PID 21292 (D:\Java FSD\Capstone Project\MedicareBackend\target\classes started by manm in D:\Java FSD\Capstone Project\MedicareBackend)
+2023-05-10 12:20:39 - No active profile set, falling back to 1 default profile: "default"
+2023-05-10 12:20:39 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-10 12:20:39 - Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2023-05-10 12:20:39 - Tomcat initialized with port(s): 8080 (http)
+2023-05-10 12:20:39 - Starting service [Tomcat]
+2023-05-10 12:20:39 - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-10 12:20:39 - Initializing Spring embedded WebApplicationContext
+2023-05-10 12:20:39 - Root WebApplicationContext: initialization completed in 159 ms
+2023-05-10 12:20:39 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-10 12:20:39 - HikariPool-3 - Starting...
+2023-05-10 12:20:39 - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b2992b7
+2023-05-10 12:20:39 - HikariPool-3 - Start completed.
+2023-05-10 12:20:39 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-10 12:20:39 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-10 12:20:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-10 12:20:39 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-10 12:20:39 - LiveReload server is running on port 35729
+2023-05-10 12:20:39 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-10 12:20:39 - Started MedicareBackendApplication in 0.325 seconds (process running for 270.467)
+2023-05-10 12:20:39 - Condition evaluation unchanged
+2023-05-10 12:20:54 - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2023-05-10 12:20:54 - Stopping service [Tomcat]
+2023-05-10 12:20:54 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-10 12:20:54 - HikariPool-3 - Shutdown initiated...
+2023-05-10 12:20:54 - HikariPool-3 - Shutdown completed.
+2023-05-10 12:20:55 - Starting MedicareBackendApplication using Java 17.0.6 with PID 21292 (D:\Java FSD\Capstone Project\MedicareBackend\target\classes started by manm in D:\Java FSD\Capstone Project\MedicareBackend)
+2023-05-10 12:20:55 - No active profile set, falling back to 1 default profile: "default"
+2023-05-10 12:20:55 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-10 12:20:55 - Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2023-05-10 12:20:55 - Tomcat initialized with port(s): 8080 (http)
+2023-05-10 12:20:55 - Starting service [Tomcat]
+2023-05-10 12:20:55 - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-05-10 12:20:55 - Initializing Spring embedded WebApplicationContext
+2023-05-10 12:20:55 - Root WebApplicationContext: initialization completed in 149 ms
+2023-05-10 12:20:55 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-10 12:20:55 - HikariPool-4 - Starting...
+2023-05-10 12:20:55 - HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18383899
+2023-05-10 12:20:55 - HikariPool-4 - Start completed.
+2023-05-10 12:20:55 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-10 12:20:55 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-10 12:20:55 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-10 12:20:55 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-10 12:20:55 - LiveReload server is running on port 35729
+2023-05-10 12:20:55 - Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-10 12:20:55 - Started MedicareBackendApplication in 0.287 seconds (process running for 286.263)
+2023-05-10 12:20:55 - Condition evaluation unchanged
