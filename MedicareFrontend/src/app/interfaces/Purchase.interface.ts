@@ -2,7 +2,7 @@ import { Medicine } from './Medicine.interface';
 
 export interface Purchase {
   id?: number;
-  medicine: Medicine;
+  medicines: Medicine;
   quantity: number;
   totalAmount: number;
 }

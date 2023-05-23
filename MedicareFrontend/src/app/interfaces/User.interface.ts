@@ -7,5 +7,5 @@ export interface User {
   name?: String;
   password?: String;
   cart?: Cart[];
-  purchase?: Purchase[];
+  purchases?: Purchase[];
 }

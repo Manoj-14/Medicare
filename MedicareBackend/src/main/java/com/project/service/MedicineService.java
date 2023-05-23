@@ -14,66 +14,60 @@ import jakarta.transaction.Transactional;
 
 @Service
 public class MedicineService {
-	
+
 	@Autowired
-	MedicineRepository medicineRepo ;
-	
+	MedicineRepository medicineRepo;
+
 	@Transactional
 	public void create(Medicine medicine) throws EntityNotCreatedException {
 		try {
 			medicineRepo.save(medicine);
-		}catch (Exception e) {
+		} catch (Exception e) {
 			throw new EntityNotCreatedException();
 		}
 	}
-	
+
 	@Transactional
 	public void update(Medicine medicine) throws EntityNotFoundException {
 		try {
 			medicineRepo.save(medicine);
-		}catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Transactional
 	public void enableMedicine(int id) throws EntityNotFoundException {
-		if(!medicineRepo.existsById(id)) {
+		if (!medicineRepo.existsById(id)) {
 			throw new EntityNotFoundException();
-		}
-		else {
+		} else {
 			Medicine medicine = medicineRepo.findById(id);
-			medicine.setActive((medicine.isActive())? false:true);
+			medicine.setActive((medicine.isActive()) ? false : true);
 			medicineRepo.save(medicine);
 		}
 	}
-	
+
 	@Transactional
 	public void removeMedicine(int id) throws EntityNotFoundException {
-		if(!medicineRepo.existsById(id)) {
+		if (!medicineRepo.existsById(id)) {
 			throw new EntityNotFoundException();
-		}
-		else {
+		} else {
 			Medicine medicine = medicineRepo.findById(id);
-			medicineRepo.delete(medicine);			
+			medicineRepo.delete(medicine);
 		}
 	}
-	
+
 	public Medicine getMedicine(int id) throws EntityNotFoundException {
-		if(!medicineRepo.existsById(id)) {
+		if (!medicineRepo.existsById(id)) {
 			throw new EntityNotFoundException();
-		}
-		else {
-			return medicineRepo.findById(id);	
+		} else {
+			return medicineRepo.findById(id);
 		}
 	}
-	
-	public List<Medicine> getMedicines(int id) throws EntityNotFoundException {
-		if(!medicineRepo.existsById(id)) {
-			throw new EntityNotFoundException();
-		}
-		else {
-			return (List<Medicine>) medicineRepo.findAll();	
-		}
+
+	public List<Medicine> getMedicines() throws EntityNotFoundException {
+
+		return (List<Medicine>) medicineRepo.findAll();
+
 	}
 }

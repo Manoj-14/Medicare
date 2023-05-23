@@ -1,0 +1,10 @@
+<div class="startMarginTop">
+  <h2 class="text-center">Medicine Catalog</h2>
+  <div class="pr-5 pl-5">
+    <div class="row">
+      <div class="col-lg-3" *ngFor="let medicine of medicines">
+        <app-medicine [medicine]="medicine" [isCatalog]="true"></app-medicine>
+      </div>
+    </div>
+  </div>
+</div>

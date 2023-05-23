@@ -1,0 +1,29 @@
+.navbar {
+  padding-bottom: 0 !important;
+  background-color: var(--coral) !important;
+}
+.navbar-nav {
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.navbar-nav > li {
+  font-weight: bolder;
+  padding: 0.2px 20px;
+}
+
+nav .navbar-nav li a {
+  color: white !important;
+}
+
+.route-active {
+  border-bottom: 0 !important;
+  border: 2px solid white;
+  border-radius: 5px 5px 0px 0px;
+  background-color: white;
+}
+
+.route-active > #router-link {
+  color: var(--secondary-color1) !important;
+  font-weight: bold;
+}

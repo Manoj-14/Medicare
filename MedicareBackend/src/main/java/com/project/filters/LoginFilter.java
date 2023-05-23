@@ -1,10 +1,8 @@
 package com.project.filters;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-import com.project.service.AdminService;
 import com.project.utils.Utils;
 
 import jakarta.servlet.Filter;
@@ -13,7 +11,6 @@ import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
-import jakarta.servlet.http.HttpServletRequest;
 
 
 public class LoginFilter implements Filter {
@@ -22,6 +19,12 @@ public class LoginFilter implements Filter {
 			throws IOException, ServletException {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
+		Enumeration<String> attributeNames = request.getAttributeNames();
+		  while (attributeNames.hasMoreElements()) {
+		    String attributeName = attributeNames.nextElement();
+		    Object attributeValue = request.getAttribute(attributeName);
+		    System.out.println(attributeName+":"+attributeValue);
+		  }
 		System.out.println("####################### Filter #####################");
 		RequestDispatcher dispatcher;
 		if(email == null || password == null) {

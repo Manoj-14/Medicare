@@ -1,38 +1,57 @@
 package com.project.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
-@Embeddable
+@Entity
 public class Cart {
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id")
-	List<Medicine> medicines = new ArrayList<>();
-
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	int id ;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	Medicine medicines;
+	int quantity;
+	
 	public Cart() {
 
 	}
 
-	public Cart(List<Medicine> medicines) {
+	public Cart(Medicine medicines, int quantity) {
+		super();
 		this.medicines = medicines;
+		this.quantity = quantity;
 	}
 
-	public List<Medicine> getMedicines() {
+	public Medicine getMedicines() {
 		return medicines;
 	}
 
-	public void setMedicines(List<Medicine> medicines) {
+	public void setMedicines(Medicine medicines) {
 		this.medicines = medicines;
 	}
 
-	public void addMedicine(Medicine medicine) {
-		this.getMedicines().add(medicine);
+	public int getQuantity() {
+		return quantity;
 	}
 
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	
+	
 }

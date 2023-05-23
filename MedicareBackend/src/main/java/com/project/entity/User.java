@@ -3,8 +3,9 @@ package com.project.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.persistence.Embedded;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -19,22 +20,23 @@ public class User {
 	String name;
 	String email;
 	String password;
-	@Embedded
-	Cart cart = new Cart();
-	
-	@OneToMany
+
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	List<Cart> cart;
+
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	List<Purchase> purchases = new ArrayList<>();
 
 	public User() {
 
 	}
 
-	public User(String name, String email, String password, Cart cart) {
+	public User(String name, String email, String password) {
 		super();
 		this.name = name;
 		this.email = email;
 		this.password = password;
-		this.cart = cart;
+		this.cart = new ArrayList<>();
 	}
 
 	public int getUser_id() {
@@ -69,11 +71,11 @@ public class User {
 		this.password = password;
 	}
 
-	public Cart getCart() {
+	public List<Cart> getCart() {
 		return cart;
 	}
 
-	public void setCart(Cart cart) {
+	public void setCart(List<Cart> cart) {
 		this.cart = cart;
 	}
 
@@ -84,7 +86,5 @@ public class User {
 	public void setPurchases(List<Purchase> purchases) {
 		this.purchases = purchases;
 	}
-	
-	
 
 }

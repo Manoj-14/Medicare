@@ -1,0 +1,46 @@
+<p>admin-nav works!</p>
+<nav class="navbar navbar-expand-sm nav-bg navbar-dark fixed-top">
+  <div class="container">
+    <a href="#" class="navbar-brand">Medicare</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarContent"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav">
+        <li
+          class="nav-item"
+          role="presentation"
+          routerLinkActive="route-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/admin/profile" class="nav-link" id="router-link"
+            >Profile</a
+          >
+        </li>
+        <li
+          class="nav-item"
+          role="presentation"
+          routerLinkActive="route-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/admin/addMedicine" class="nav-link" id="router-link"
+            >Add Medicines</a
+          >
+        </li>
+        <li
+          class="nav-item"
+          role="presentation"
+          routerLinkActive="route-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="/" class="nav-link" id="router-link">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

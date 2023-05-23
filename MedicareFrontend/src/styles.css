@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+:root {
+  --alice-blue: #dce9ee;
+  --antiflash-white: #f4fafb;
+  --delft-blue: #243064;
+  --space-cadet: #18214b;
+  --coral: #fe804b;
+  --blue: #007bff;
+}
+
+.material-icons {
+  margin: auto !important;
+}
+
+.navbar {
+  padding-bottom: 0 !important;
+  background-color: var(--blue) !important;
+}
+.navbar-nav {
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.navbar-nav > li {
+  font-weight: bolder;
+  padding: 0.2px 20px;
+}
+
+nav .navbar-nav li a {
+  color: white !important;
+}
+
+.route-active {
+  border-bottom: 0 !important;
+  border: 2px solid white;
+  border-radius: 5px 5px 0px 0px;
+  background-color: white;
+}
+
+.route-active > #router-link {
+  color: var(--secondary-color1) !important;
+  font-weight: bold;
+}
+
+.startMarginTop {
+  margin-top: 4rem;
+}
+input.ng-invalid.ng-touched {
+  border: 2px tomato solid;
+}

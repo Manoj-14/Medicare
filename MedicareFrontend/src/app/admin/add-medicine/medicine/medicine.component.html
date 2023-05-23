@@ -1,0 +1,47 @@
+<div class="product_card">
+  <div class="card border-1">
+    <div class="card-header bg-transparent border-0 p-0">
+      <div class="card-body p-2">
+        <small>
+          <a href="#" class="text-muted">{{ medicine.seller }}</a>
+        </small>
+        <strong>
+          <a href="#" class="text-body">{{ medicine.name }}</a>
+        </strong>
+        <p class="card-text">
+          {{ medicine.description }}
+        </p>
+        <div class="price">
+          <span class="text-warning"> &#8377; {{ medicine.price }}</span>
+        </div>
+        <div class="d-flex justify-content-around flex-wrap m-2">
+          <div class="custom-control custom-switch">
+            <input
+              type="checkbox"
+              [checked]="medicine.active"
+              class="custom-control-input"
+              id="{{ medicine.id }}"
+              [(ngModel)]="medicine.active"
+              (click)="activeBtn()"
+            />
+            <label
+              class="custom-control-label"
+              for="{{ medicine.id }}"
+              *ngIf="medicine.active"
+              >Enabled</label
+            >
+            <label
+              class="custom-control-label"
+              for="{{ medicine.id }}"
+              *ngIf="!medicine.active"
+              >Disabled</label
+            >
+          </div>
+          <button type="button" class="btn btn-info" (click)="edit()">
+            Edit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
