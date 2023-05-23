@@ -1,0 +1,36 @@
+.imp {
+  color: red;
+  font-weight: bold;
+}
+
+.mainDiv {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15px;
+}
+
+.contents {
+  flex: 1;
+  overflow-x: auto;
+  margin-left: 500px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
+}
+
+.formDiv {
+  width: 500px;
+  position: fixed;
+  left: 3rem;
+  top: 3rem;
+  bottom: 0;
+  z-index: 5;
+  @media (max-width: 768px) {
+    position: static !important;
+    width: 100%;
+  }
+}
+.formDiv div {
+  width: 100%;
+}

@@ -1,0 +1,28 @@
+.cartHome {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15px;
+}
+
+.cartItems {
+  flex: 1;
+  overflow-x: auto;
+  margin-right: 500px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
+}
+
+.paymentGatway {
+  width: 500px;
+  position: fixed;
+  right: 1rem;
+  top: 5rem;
+  bottom: 0;
+  z-index: 5;
+  @media (max-width: 768px) {
+    position: static !important;
+    width: 100%;
+  }
+}
