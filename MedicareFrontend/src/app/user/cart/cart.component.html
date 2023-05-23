@@ -1,0 +1,37 @@
+<div class="product_card">
+  <div class="card border-1">
+    <div class="card-header bg-transparent border-0 p-0">
+      <div class="card-body p-2">
+        <small>
+          <a href="#" class="text-muted">{{ cart.id }}</a>
+        </small>
+        <strong>
+          <a href="#" class="text-body">{{ cart.medicines.name }}</a>
+        </strong>
+        <p class="card-text">
+          {{ cart.medicines.description }}
+        </p>
+        <div class="price">
+          <span class="text-decoration-line-through"
+            >&#8377; {{ cart.medicines.price - 22 }}</span
+          >
+          <span class="text-warning"> &#8377; {{ cart.medicines.price }}</span>
+        </div>
+        <div class="d-flex justify-content-around flex-wrap m-2">
+          <button (click)="increQuantity()" class="btn btn-sm btn-secondary">
+            +
+          </button>
+          <h5 id="counting">{{ cart.quantity }}</h5>
+          <button (click)="decreQuantity()">-</button>
+        </div>
+        <p
+          *ngIf="isError || isSuccess"
+          class="alert p-2 m-2"
+          [ngClass]="{ 'alert-danger': isError, 'alert-success': isSuccess }"
+        >
+          {{ message }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

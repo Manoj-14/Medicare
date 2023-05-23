@@ -33,6 +33,10 @@ public class AdminService {
 	public boolean authenticate(String email, String password) {
 		return adminRepo.existsByEmailAndPassword(email, password);
 	}
+	
+	public Admin getAdminByEmail(String email) {
+		return adminRepo.findByEmail(email);
+	}
 
 	public Admin getAdmin(String email, String password) throws UserNotFoundException {
 

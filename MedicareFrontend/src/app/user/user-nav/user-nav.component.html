@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-sm nav-bg navbar-dark fixed-top">
+  <div class="container">
+    <a href="#" class="navbar-brand">Blog App</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarContent"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav">
+        <li
+          class="nav-item"
+          role="presentation"
+          routerLinkActive="route-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="user/profile" class="nav-link" id="router-link"
+            >Profile</a
+          >
+        </li>
+        <li
+          class="nav-item"
+          role="presentation"
+          routerLinkActive="route-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="user/browseMedicines" class="nav-link" id="router-link"
+            >Browse Medicines</a
+          >
+        </li>
+        <li
+          class="nav-item"
+          role="presentation"
+          routerLinkActive="route-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="user/cart" class="nav-link" id="router-link">Cart</a>
+        </li>
+        <li
+          class="nav-item"
+          role="presentation"
+          routerLinkActive="route-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a routerLink="user/history" class="nav-link" id="router-link"
+            >History</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

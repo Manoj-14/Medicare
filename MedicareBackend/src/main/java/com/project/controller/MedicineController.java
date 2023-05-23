@@ -1,11 +1,16 @@
 package com.project.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,7 +30,8 @@ public class MedicineController {
 	MedicineService medicineService;
 	
 	@PostMapping("/create")
-	public boolean create(@ModelAttribute Medicine medicine, @RequestParam("email") String email) {
+	public boolean create(@RequestBody Medicine medicine) {
+		System.out.println(medicine);
 		try {
 			medicineService.create(medicine);
 			return true;
@@ -52,6 +58,39 @@ public class MedicineController {
 			return true ;
 		} catch (EntityNotFoundException e) {
 			return false ;
+		}
+	}
+	
+	@PutMapping("update/{id}")
+	public ResponseEntity<?> getMedicines(@PathVariable("id") int id,@ModelAttribute Medicine medicine){
+		try {
+			medicineService.update(medicine);
+			return ResponseEntity.accepted().build();
+		} catch (EntityNotFoundException e) {
+			e.printStackTrace();
+			return ResponseEntity.noContent().build();
+		}
+	}
+	
+	@GetMapping("findAll")
+	public ResponseEntity<?> getMedicines(){
+		try {
+			List<Medicine> medicines = medicineService.getMedicines();
+			return ResponseEntity.ok(medicines);
+		} catch (EntityNotFoundException e) {
+			e.printStackTrace();
+			return ResponseEntity.noContent().build();
+		}
+	}
+	
+	@GetMapping("find/{id}")
+	public ResponseEntity<?> getMedicine(@PathVariable("id") int id){
+		try {
+			Medicine medicine = medicineService.getMedicine(id);
+			return ResponseEntity.ok(medicine);
+		} catch (EntityNotFoundException e) {
+			e.printStackTrace();
+			return ResponseEntity.noContent().build();
 		}
 	}
 	

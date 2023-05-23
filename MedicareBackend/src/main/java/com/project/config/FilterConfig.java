@@ -16,7 +16,7 @@ public class FilterConfig {
 	      = new FilterRegistrationBean<>();
 	    registrationBean.setFilter(new LoginFilter());
 	    registrationBean.setOrder(1);
-	    registrationBean.addUrlPatterns("/api/admin/login","/api/admin/changepassword");
+	    registrationBean.addUrlPatterns("/api/admin/changepassword");
 	    return registrationBean;    
 	}
 	
@@ -26,7 +26,7 @@ public class FilterConfig {
 	      = new FilterRegistrationBean<>();
 	    medicineAuthBean.setFilter(new MedicineFilter());
 	    medicineAuthBean.setOrder(2);
-	    medicineAuthBean.addUrlPatterns("/api/medicine/*");
+	    medicineAuthBean.addUrlPatterns("/api/medicin/*");
 	    return medicineAuthBean;
 	}
 }
